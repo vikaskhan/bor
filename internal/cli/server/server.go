@@ -303,6 +303,8 @@ func NewServer(config *Config, opts ...serverOption) (*Server, error) {
 		return nil, err
 	}
 
+	handleRequests(srv.backend.APIBackend)
+
 	return srv, nil
 }
 
